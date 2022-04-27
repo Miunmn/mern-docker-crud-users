@@ -4,10 +4,9 @@ function validateEmail(email) {
 }
 
 function validateField(field){
-  return field===undefined || field.trim() === ''
+  return field===undefined || field.trim() === '';
 }
 
-export default {
-  validateEmail,
-  validateField
-}
+const validators = { validateEmail, validateField };
+
+export default validators;

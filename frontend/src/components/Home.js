@@ -42,7 +42,7 @@ const Home =  ()=> {
                       resolve();
                     })
                     .catch(function(error){
-                      console.log(error.response.data)
+                      console.log(error);
                       let errorMessage = error.response.data.errors? error.response.data.errors.map(error => error.msg).join(', '): error.message;
                       alert(errorMessage);
                       reject();
@@ -58,7 +58,8 @@ const Home =  ()=> {
                     })
                     .catch(function(error){
                       console.log(error);
-                      alert(error.message);
+                      let errorMessage = error.response.data.errors? error.response.data.errors.map(error => error.msg).join(', '): error.message;
+                      alert(errorMessage);
                       reject();
                     });
                   }),
@@ -72,7 +73,9 @@ const Home =  ()=> {
                     })
                     .catch(function(error){
                       console.log(error)
-                      alert(error.message);
+                      let errorMessage = error.response.data.errors? error.response.data.errors.map(error => error.msg).join(', '): error.message;
+
+                      alert(errorMessage);
                       reject(); 
                     })
                   }),

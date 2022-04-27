@@ -22,15 +22,6 @@ describe('Error handling!', () => {
       });
     expect(response.status).toBe(400);
   });
-  test("It should return 400 status code if POST body request fields are not expected", async () => {
-    const response = await request(app)
-      .post('/create-user')
-      .send({
-        first_name: '',
-        new_unexpected_field: 1000
-      });
-    expect(response.status).toBe(400);
-  });
   test("It should return 400 status code if email on the POST body request is not valid", async () => {
     const response = await request(app)
       .post('/create-user')
@@ -66,6 +57,12 @@ describe('Error handling!', () => {
         new_unexpected_field: 1000
       });
     expect(response.status).toBe(400);
+  });
+
+  test("It should return 404 status code if we try to make DELETE to 'create-user' ", async () => {
+    const response = await request(app)
+      .delete('/create-user')
+    expect(response.status).toBe(404);
   });
 
 });

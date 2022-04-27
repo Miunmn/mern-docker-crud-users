@@ -8,7 +8,8 @@ async function connectDB(){
     const con = await mongoose.connect(`mongodb://${process.env.MONGODB_HOST}/user_engine`, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
-      useCreateIndex: true
+      useCreateIndex: true,
+      useFindAndModify: false 
     });
 
     console.log(`Database connected successfully : ${con.connection.host}`);
