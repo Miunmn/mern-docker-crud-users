@@ -24,7 +24,7 @@ const Home =  ()=> {
       <div className='d-flex justify-content-center p-4'>
 
         <MaterialTable
-              className={'user-table'}
+              style={{ width: '90%'}}
               title="Users"
               columns={[
                 { title: 'Name', field: 'first_name', validate: rowData => validators.validateField(rowData.first_name)? { isValid: false, helperText: 'Name cannot be empty' }: true },

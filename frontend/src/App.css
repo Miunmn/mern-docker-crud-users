@@ -12,19 +12,9 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
-@media screen and (max-width: 600px) {
-  .user-table {
-    width: 90%;
-  }
+.user-table {
+  width: 90%;
 }
-  
-@media screen and (min-width: 601px) {
-  .user-table {
-    width: 70%;
-  }
-}
-
 
 .App-header {
   background-color: #282c34;

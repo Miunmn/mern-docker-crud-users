@@ -28,7 +28,6 @@ function App() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Open Loop
           </Typography>
-          <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
     </Box>
